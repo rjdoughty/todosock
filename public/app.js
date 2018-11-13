@@ -1,8 +1,24 @@
 
 $( function(){
-    const socket = io();
-    
 
+    const socket = io();
+    const addday = function () {
+        const d = new Date(),
+        days = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+        const day = days[d.getDay()]
+        $('#day').html(day);
+        console.log(day);
+    }
+    $(document).ready(addday);
+    
+    const adddate = function () {
+        const d = new Date(),
+        months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+        const date = months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()
+        $('#date').html(date);
+        console.log(date);
+    }
+    $(document).ready(adddate);
 
       const runTaskQuery = function () {
         $('#todoItems').empty();
@@ -10,8 +26,10 @@ $( function(){
           .then(function (taskList) {
               let htmlstr = '';
               taskList.forEach(e => {
-                  htmlstr += `<li id="todos"><span id="chore">${e.todoItem}</span>`;
-                  htmlstr += `<button type="submit" id="remove" data-status=${e.completed} data-id=${e._id}><i class="${e.button}" data-button=${e.button}></i></button></li>`;
+                  htmlstr += `<li id="todos"><span id="chore">${e.todoItem.toUpperCase()}</span>`;
+                  htmlstr += `<button type="submit" id="remove" data-status=${e.completed} data-id=${e._id}>
+                                    <i class="${e.button}" data-button=${e.button}></i>
+                                        </button></li>`;
               });
               $('#todoItems').html(htmlstr);
         

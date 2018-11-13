@@ -9,22 +9,17 @@
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-
-
-
-    
-    
+   
 </head>
 <body>
    <main>
     <div id="header">
-    <h1>Robert's to do list</h1>
+    <h1 id="dateheader"><span id="day"></span><span id ="date"></span></h1>
     </div>
 
   <div id="newtask">
     <form id="inputs">    
-        <input id="task" name="task" type="text" placeholder="Add a to do" autocomplete="off"/>
+        <input id="task" name="task" type="text" autocomplete="off"/>
         <button type="submit" id="submit"><i class="fas fa-plus"></i></button>
     </form>
         <ul id="todoItems"></ul>
