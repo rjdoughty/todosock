@@ -1,0 +1,87 @@
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr;
+}
+
+#header {
+    background-color: rgb(172, 61, 187);
+    color: white;
+    font-size: 30px;
+    width: auto;
+    padding: 20px 20px;
+}
+
+#newtask {
+    text-align: center;
+    width: auto;
+}
+
+#inputs {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 30px;
+    padding: 25px;
+    border-bottom: 1px solid lightcyan;
+}
+#todoItems {
+    padding: 20px;
+}
+#task {
+  
+    height: 20px;
+    border: 1px solid rgb(172, 61, 187);
+    border-radius: 5px;
+    background-color: rgb(235, 239, 243);
+}
+#task:focus, #submit:focus, #remove:focus {
+    outline:0;
+}
+#submit {
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+#todos {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 30px;
+      background-color: rgb(235, 239, 243);
+      margin: 15px;
+      height: 30px;
+      padding: 5px ;
+      border-radius: 5px;
+  }
+
+  #remove {
+    border: none;
+    background-color: rgb(235, 239, 243);
+  }
+
+  #chore {
+    text-align: left;
+
+}
+
+
+
+@media only screen and (min-width: 600px){
+
+    body {
+        height: 100%;
+    } 
+
+    #newtask {
+        text-align: center;
+        width: 500px;
+        margin: auto;
+        border: 2px solid rgb(172, 61, 187);
+        border-radius: 10px;
+        margin-top: 50px;
+        height: 100%
+    }
+
+
+}
