@@ -7,12 +7,13 @@ main {
     background-color: white;
     width: 400px;
     margin: auto;
+    min-height: 500px;
     height: 100%;
     margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 75px 1fr;
-   
+    border: 3px solid darkgray;
 }
 
 #header {
@@ -21,6 +22,14 @@ main {
     padding: 20px 20px;
 }
 
+#dateheader {
+    height: 50px;
+}
+#date {
+    font-size: 15px;
+    width: 20px;
+    height: 50px;
+}
 #newtask {
     text-align: center;
     width: auto;
@@ -37,13 +46,14 @@ main {
 
 #todoItems {
     padding: 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
 #task {
     width: 300px;
     height: 20px;
     border: none;
     border-bottom: 1px solid black;
+    font-size: 20px;
 
 }
 .fa-times-circle {
